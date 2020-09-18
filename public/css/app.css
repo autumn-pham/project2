@@ -1,0 +1,17 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Courgette', cursive;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  font-family: 'Courgette', cursive;
+}
+
+.navbar a {
+  color: white;
+}
