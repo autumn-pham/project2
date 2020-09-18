@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <body>
+    <nav>
+      <%- include ('../partials/nav.ejs') %>
+    </nav>
 
     <div class="container">
     <h1><%=workout.activity%></h1>
@@ -25,7 +28,7 @@
     <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
     </form>
-    
+
     </div>
 
   </body>

@@ -1,24 +1,36 @@
 const express = require('express')
 const Workout = require('../models/workouts.js')
 const workouts = express.Router()
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
 
 // NEW
 
 workouts.get('/new', (req, res)=>{
-    res.render('workouts/new.ejs');
+    res.render('workouts/new.ejs'),
+    {currentUser: req.session.currentUser}
 });
 
 // EDIT
 
 workouts.get('/:id/edit', (req, res)=>{
-  Workout.findById(req.params.id, (err, foundWorkout)=>{
-    res.render(
-    	'workouts/edit.ejs',
-    		{
-    			workout: foundWorkout
-    		}
-    );
-  });
+  if (req.session.currentUser) {
+    Workout.findById(req.params.id, (err, foundWorkout)=>{
+      res.render(
+      	'workouts/edit.ejs',
+      		{
+      			workout: foundWorkout,
+            currentUser: req.session.currentUser
+      		})
+        })
+      } else {
+        res.redirect('/sessions/new')
+      }
 });
 
 // DELETE
@@ -33,7 +45,8 @@ workouts.delete('/:id', (req, res) => {
 workouts.get('/:id', (req, res)=>{
   Workout.findById(req.params.id, (error, foundWorkout)=>{
     res.render('workouts/show.ejs', {
-      workout: foundWorkout
+      workout: foundWorkout,
+      currentUser: req.session.currentUser
     });
   });
 });
@@ -60,7 +73,8 @@ workouts.post('/', (req, res)=>{
 workouts.get('/', (req, res) =>{
   Workout.find({}, (error, allWorkouts)=>{
       res.render('workouts/index.ejs', {
-        workouts: allWorkouts
+        workouts: allWorkouts,
+        currentUser: req.session.currentUser
       });
   });
 });
