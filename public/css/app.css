@@ -15,3 +15,56 @@ h1, h2 {
 .navbar a {
   color: white;
 }
+
+/* SHOW PAGE */
+
+.show-workout {
+  background-color: whitesmoke;
+  color: black;
+  width: 60%;
+  margin: 0 auto;
+  padding: 1em 3em;
+  box-sizing: border-box;
+  border-radius: 1em;
+  text-align: center;
+}
+
+/* FORMS */
+
+fieldset {
+  width: 600px;
+  height: 600px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+legend {
+  padding: 0px 10px;
+  color: white;
+}
+
+label {
+  display: block;
+}
+
+input {
+  width: 50%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+input[type="submit"] {
+  width: 50%;
+  height: 50px;
+  border: 0px;
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+button > a {
+  color: black;
+}

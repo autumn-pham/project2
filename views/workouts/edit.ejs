@@ -10,25 +10,28 @@
     </nav><br />
 
     <!-- INPUT FORM -->
-    <form action="/workouts/<%=workout.id%>?_method=PUT" method="POST">
-        <label for="date">DATE:</label>
-        <input type="text" name="date" value="<%=workout.date%>" />
-        <label for="activity">ACTIVITY:</label>
-        <input type="text" name="activity" value="<%=workout.activity%>" />
-        <label for="type">TYPE:</label>
-        <input type="text" name="type" value="<%=workout.type%>" />
-        <label for="weight">CURRENT WEIGHT:</label>
-        <input type="text" name="weight" value="<%=workout.weight%>" />
-        <label for="time">TIME:</label>
-        <input type="text" name="time" value="<%=workout.time%>" />
+    <div class="container">
+      <form action="/workouts/<%=workout.id%>?_method=PUT" method="POST">
+        <fieldset class="edit-info">
+          <label for="date">DATE:</label>
+          <input type="text" name="date" value="<%=workout.date%>" />
+          <label for="activity">ACTIVITY:</label>
+          <input type="text" name="activity" value="<%=workout.activity%>" />
+          <label for="type">TYPE:</label>
+          <input type="text" name="type" value="<%=workout.type%>" />
+          <label for="weight">CURRENT WEIGHT:</label>
+          <input type="text" name="weight" value="<%=workout.weight%>" />
+          <label for="time">TIME:</label>
+          <input type="text" name="time" value="<%=workout.time%>" />
 
-        <br />
-        <input type="submit" value="SUBMIT">
-      </form>
-      <button type="button" name="button">
-        <a href="/workouts">BACK</a>
-      </button>
-
+          <br />
+          <input type="submit" value="SUBMIT">
+        </fieldset>
+        </form>
+        <button type="button" name="button">
+          <a href="/workouts">BACK</a>
+        </button>
+    </div>
 
   </body>
 </html>

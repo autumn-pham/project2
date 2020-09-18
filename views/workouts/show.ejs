@@ -9,9 +9,8 @@
       <%- include('../partials/nav.ejs') %>
     </nav><br />
 
-    <div class="container">
+    <main class="show-workout">
     <h1><%=workout.activity%></h1>
-    <a href="/workouts"><button>back</button></a>
     <h5>date</h5>
     <h6><%=workout.date%></h6>
     <h5>activity</h5>
@@ -22,14 +21,14 @@
     <h6><%=workout.weight%></h6>
     <h5>time exercised (in minutes)</h5>
     <h6><%=workout.time%></h6>
-
-    <button type="button" name="button"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button>
     <br /><br />
+    <button type="button" name="button"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button><br /><br />
     <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
     </form>
 
-    </div>
+
+  </main>
 
   </body>
 </html>
