@@ -24,9 +24,9 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true,
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
 db.on('disconnected', () => console.log('mongo disconnected'));
-//___________________
+
 //Middleware
-//___________________
+
 //use public folder for static assets
 app.use(express.static('public'));
 // populates req.body with parsed info from forms - if no data from forms will return an empty object {}
@@ -34,14 +34,18 @@ app.use(express.urlencoded({ extended: false }));// extended: false - does not a
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project if you are using 3rd party API you need it
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
-//___________________
+
+// Controllers
+const workoutsController = require('./controllers/workouts_controller.js')
+app.use('/workouts', workoutsController)
+
 // Routes
-//___________________
+
 //localhost:3000
 app.get('/' , (req, res) => {
   res.send('Hello World!');
 });
-//___________________
+
 //Listener
-//___________________
+
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));

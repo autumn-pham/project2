@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- MAIN STATIC STUFF -->
+    FAB FIGHT FIT
+    <!-- to be replaced with an ejs -->
+
+    <!-- ENTRIES -->
+    <div class="container">
+      <table>
+        <% for (let i = 0; i < workouts.length; i++) { %>
+          <tr>
+            <td><%= workouts[i].date %></td>
+            <td><a href="/workouts/<%= workouts[i]._id %>"><%= workouts[i].activity %></a></td>
+            <td><%= workouts[i].time %> </td>
+          </tr>
+          <% } %>
+      </table>
+
+    </div>
+
+  </body>
+</html>

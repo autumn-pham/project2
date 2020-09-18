@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- INPUT FORM -->
+    <div class="container">
+      <h1>Log New Workout</h1>
+      <form action="/workouts" method="POST">
+        <label for="date">DATE:</label>
+        <input type="text" name="date" required />
+        <label for="activity">ACTIVITY:</label>
+        <input type="text" name="activity" required />
+        <label for="type">TYPE:</label>
+        <input type="text" name="type"/>
+        <label for="weight">CURRENT WEIGHT:</label>
+        <input type="text" name="weight" required />
+        <label for="time">TIME SPENT EXERCISING:</label>
+        <input type="text" name="time" required />
+        <br>
+        <input type="submit" value="ADD">
+      <form>
+    </div>
+
+  </body>
+</html>
