@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+     <%- include('../partials/head.ejs') %>
   </head>
   <body>
-    <!-- MAIN STATIC STUFF -->
+    <!-- NAV -->
     <nav>
-    <h1>Fab Fight Fit</h1>
-    </nav>
+      <%- include('../partials/nav.ejs') %>
+    </nav><br />
+
+    <!-- MAIN STATIC STUFF -->
 
     <!-- ENTRIES -->
     <div class="container">
-      <table>
-        <% for (let i = 0; i < workouts.length; i++) { %>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Activity</th>
+          <th scope="col">Time Spent Exercising</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let i = 0; i < workouts.length; i++) { %>
           <tr>
             <td><%= workouts[i].date %></td>
             <td><a href="/workouts/<%= workouts[i]._id %>"><%= workouts[i].activity %></a></td>
-            <td><%= workouts[i].time %> </td>
+            <td><%= workouts[i].time %></td>
           </tr>
           <% } %>
+        </tbody>
       </table>
 
     </div>
