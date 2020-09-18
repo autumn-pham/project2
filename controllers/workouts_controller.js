@@ -10,13 +10,23 @@ workouts.get('/new', (req, res)=>{
 
 // EDIT
 
+workouts.get('/:id/edit', (req, res)=>{
+  Workout.findById(req.params.id, (err, foundWorkout)=>{
+    res.render(
+    	'workouts/edit.ejs',
+    		{
+    			workout: foundWorkout
+    		}
+    );
+  });
+});
+
 // DELETE
-
-
-
-// UPDATE
-
-// CREATE
+workouts.delete('/:id', (req, res) => {
+  Workout.findByIdAndRemove(req.params.id, (err, deletedWorkout) => {
+    res.redirect('/workouts')
+  })
+})
 
 // SHOW
 
@@ -25,6 +35,23 @@ workouts.get('/:id', (req, res)=>{
     res.render('workouts/show.ejs', {
       workout: foundWorkout
     });
+  });
+});
+
+
+// UPDATE
+
+workouts.put('/:id', (req, res)=>{
+  Workout.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, updatedModel)=>{
+    res.redirect('/workouts');
+  });
+});
+
+// CREATE
+
+workouts.post('/', (req, res)=>{
+  Workout.create(req.body, (error, createdWorkout)=>{
+    res.redirect('/workouts');
   });
 });
 
