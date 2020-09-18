@@ -34,7 +34,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));// extended: false - does not allow nested objects in query strings
 app.use(express.json());// returns middleware that only parses JSON - may or may not need it depending on your project if you are using 3rd party API you need it
 //use method override
-// app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
+app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // sign up/log in
 // app.use(
 //   session({
