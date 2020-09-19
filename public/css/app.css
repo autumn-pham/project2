@@ -16,6 +16,19 @@ h1, h2 {
   color: white;
 }
 
+/* INDEX PAGE */
+
+/* .strength {
+  background: url();
+  background-position: cover;
+  background-repeat: none;
+} */
+
+table {
+  margin: 5em 0;
+}
+
+
 /* SHOW PAGE */
 
 .show-workout {

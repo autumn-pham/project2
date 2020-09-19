@@ -8,16 +8,22 @@
     <nav>
       <%- include('../partials/nav.ejs') %>
     </nav><br />
-
+  <div class="container">
     <!-- MAIN STATIC STUFF  -->
-  <div class="d-flex flex-row justify-content-around">
-    <div class="p-2 bd-highlight">CARDIO/ENDURANCE TRAINING</div>
-    <div class="p-2 bd-highlight">STRENGTH TRAINING</div>
-    <div class="p-2 bd-highlight">STATIC STRETCHING</div>
-  </div>
+    <div class="d-flex flex-row justify-content-around">
+      <div class="p-2 bd-highlight cardio">CARDIO/ENDURANCE TRAINING<br/>
+        <img src='https://i.ibb.co/mq2m6YF/Autumn-Cardio.jpg'>
+      </div>
+      <div class="p-2 bd-highlight strength">STRENGTH TRAINING<br/>
+        <img src='https://i.ibb.co/s9KnZWd/Autumn-Lifting.jpg'>
+      </div>
+      <div class="p-2 bd-highlight static">STATIC STRETCHING<br/>
+        <!-- NEED PHOTO HERE -->
+      </div>
+    </div>
 
     <!-- ENTRIES -->
-    <div class="container">
+
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -36,7 +42,6 @@
           <% } %>
         </tbody>
       </table>
-
     </div>
 
   </body>
