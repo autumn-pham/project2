@@ -13,20 +13,24 @@
     <div class="container">
       <h1>Log New Workout</h1>
       <form action="/workouts" method="POST">
-        <fieldset class="new-info">
+        <div class="form-group">
           <label for="date">DATE:</label>
           <input type="text" name="date" required />
           <label for="activity">ACTIVITY:</label>
           <input type="text" name="activity" required />
           <label for="type">TYPE:</label>
-          <input type="text" name="type" placeholder="cardio/strength training/static stretching"/>
+          <select class="form-control-sm">
+            <option>cardio</option>
+            <option>strength training</option>
+            <option>static stretching</option>
+          </select>
           <label for="weight">CURRENT WEIGHT:</label>
-          <input type="text" name="weight" required />
+          <input type="text" name="weight" placeholder="in lbs" required />
           <label for="time">TIME SPENT EXERCISING:</label>
           <input type="text" name="time" placeholder="in minutes" required />
           <br>
           <input type="submit" value="ADD">
-        </fieldset>
+        </div>
       </form>
     </div>
 
