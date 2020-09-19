@@ -44,12 +44,18 @@ table {
 
 /* FORMS */
 
-fieldset {
-  width: 600px;
-  height: 600px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin: 20px 0;
+
+.sidebar {
+  background: url('https://i.ibb.co/VH2HvRC/paigevzkaratiehottie.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: white;
+}
+
+.newlog {
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 legend {

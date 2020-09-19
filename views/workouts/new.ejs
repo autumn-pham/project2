@@ -12,27 +12,31 @@
     <!-- INPUT FORM -->
     <div class="container">
       <h1>Log New Workout</h1>
-      <form action="/workouts" method="POST">
-        <div class="form-group">
-          <label for="date">DATE:</label>
-          <input type="text" name="date" required />
-          <label for="activity">ACTIVITY:</label>
-          <input type="text" name="activity" required />
-          <label for="type">TYPE:</label>
-          <select class="form-control-sm">
-            <option>cardio</option>
-            <option>strength training</option>
-            <option>static stretching</option>
-          </select>
-          <label for="weight">CURRENT WEIGHT:</label>
-          <input type="text" name="weight" placeholder="in lbs" required />
-          <label for="time">TIME SPENT EXERCISING:</label>
-          <input type="text" name="time" placeholder="in minutes" required />
-          <br>
-          <input type="submit" value="ADD">
-        </div>
-      </form>
+      <div class="d-flex flex-row justify-content-space-around flex-fill">
+      <div class="p-2 sidebar"><h3>WORK YOUR WAY TO A FIGHTER'S PHYSIQUE</h3></div>
+      <div class="p-2 flex-fill newlog">
+        <form action="/workouts" method="POST">
+          <div class="form-group">
+            <label for="date">DATE:</label>
+            <input type="text" name="date" required />
+            <label for="activity">ACTIVITY:</label>
+            <input type="text" name="activity" required />
+            <label for="type">TYPE:</label>
+            <select class="form-control-sm">
+              <option>cardio</option>
+              <option>strength training</option>
+              <option>static stretching</option>
+            </select>
+            <label for="weight">CURRENT WEIGHT:</label>
+            <input type="text" name="weight" placeholder="in lbs" required />
+            <label for="time">TIME SPENT EXERCISING:</label>
+            <input type="text" name="time" placeholder="in minutes" required />
+            <br>
+            <input type="submit" value="ADD">
+          </div>
+        </form>
+      </div>
     </div>
-
+  </div>
   </body>
 </html>
