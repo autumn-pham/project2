@@ -6,9 +6,13 @@ h1, h2 {
   font-family: 'Courgette', cursive;
 }
 
-h4 {
+.fighter-physique h4 {
   text-align: center;
   border: 1px solid black;
+}
+
+h4 {
+  text-align: center;
 }
 
 
