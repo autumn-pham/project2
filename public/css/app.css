@@ -6,6 +6,11 @@ h1, h2 {
   font-family: 'Courgette', cursive;
 }
 
+h4 {
+  text-align: center;
+  border: 1px solid black;
+}
+
 
 .navbar {
   font-family: 'Courgette', cursive;
@@ -29,7 +34,7 @@ table {
 }
 
 .carousel-inner {
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 
 /* SHOW PAGE */
