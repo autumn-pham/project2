@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- MAIN -->
+    <h1>Edit a Product</h1>
+    <form action="/products/<%=product.id%>?_method=PUT" method="POST">
+      <fieldset class="edit-info">
+      <label for="name">NAME</label>
+      <input type="text" name="name" value="<%=product.name%>" id="name"/>
+      <label for="img">IMAGE</label>
+      <input type="text" name="img" value="<%=product.img%>"id="img"/>
+      <label for="description">DESCRIPTION</label>
+      <input type="text" name="description" value="<%=product.description%>" id="description"/>
+      <label for="price">PRICE</label>
+      <input type="text" name="price" value="<%=product.price%>" id="price"/>
+      <label for="qty">QUANTITY</label>
+      <input type="text" name="quantity" value="<%=product.qty%>" id="qty"/>
+      <input type="submit" name="" value="Submit Changes"/>
+      </fieldset>
+    </form>
+    <nav>
+    <a href="/products">Back to Store</a>
+    </nav>
+
+  </body>
+</html>

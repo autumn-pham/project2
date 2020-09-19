@@ -46,6 +46,8 @@ app.use(
 // Controllers
 const workoutsController = require('./controllers/workouts_controller.js')
 app.use('/workouts', workoutsController)
+const productsController = require('./controllers/products_controller.js')
+app.use('/products', productsController)
 const userController = require('./controllers/users_controller.js')
 app.use('/users', userController)
 const sessionsController = require('./controllers/sessions_controller.js')

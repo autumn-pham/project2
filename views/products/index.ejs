@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <nav>
+      <%- include('../partials/nav.ejs') %>
+    </nav><br />
+    <!-- MAIN -->
+        <div class="container">
+          <div class="row">
+            <% for(let i = 0; i < products.length; i++){ %>
+              <div class="col items">
+                <div class="card">
+                  <div class="card-body">
+
+                    <h2><%=products[i].name; %></h2>
+                    <img src=<%=products[i].img;%> class="card-img"><br/>
+                    <%=products[i].description; %><br/>
+                    PRICE: $<%=products[i].price; %>
+                    <% if (products[i].qty <= 0) {%>
+                         OUT OF STOCK
+                      <% } else {%>
+                      <h3>In Stock: <%=products[i].qty%></h3>
+                      <form action="/products/<%=products[i].id; %>?_method=PATCH" method="POST">
+                          <input type="submit" value="BUY"/>
+                      </form>
+                      <% } %>
+
+                 </div>
+              </div>
+
+            </div>
+            <% } %>
+          </div>
+
+      </div>
+      <!-- FOOTER -->
+      <footer>
+      <%- include('../partials/footer.ejs') %>
+      </footer>
+
+  </body>
+</html>

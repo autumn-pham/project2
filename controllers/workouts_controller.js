@@ -12,8 +12,7 @@ const isAuthenticated = (req, res, next) => {
 // NEW
 
 workouts.get('/new', (req, res)=>{
-    res.render('workouts/new.ejs')
-    ,
+    res.render('workouts/new.ejs'),
     {currentUser: req.session.currentUser}
 });
 
@@ -25,8 +24,7 @@ workouts.get('/:id/edit', (req, res)=>{
       res.render(
       	'workouts/edit.ejs',
       		{
-      			workout: foundWorkout
-            ,
+      			workout: foundWorkout,
             currentUser: req.session.currentUser
       		})
         })
@@ -82,8 +80,7 @@ workouts.post('/', (req, res)=>{
 workouts.get('/', (req, res) =>{
   Workout.find({}, (error, allWorkouts)=>{
       res.render('workouts/index.ejs', {
-        workouts: allWorkouts
-        ,
+        workouts: allWorkouts,
         currentUser: req.session.currentUser
       });
   });

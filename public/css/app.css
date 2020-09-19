@@ -28,7 +28,6 @@ table {
   margin-bottom: 3em;
 }
 
-
 /* SHOW PAGE */
 
 .show-workout {
@@ -72,6 +71,7 @@ footer img {
 
 
 .fa {
+  justify-content: center;
   color: white;
   width: 100px;
   text-decoration: none;
@@ -122,4 +122,11 @@ input[type="submit"]:hover {
 
 button > a {
   color: black;
+}
+
+/* SHOP */
+
+.card-img {
+  width: 300px;
+  height: 300px;
 }

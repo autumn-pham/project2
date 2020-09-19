@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <main class="show-main">
+      <h2> <%=product.name%> </h2>
+      <img src=<%=product.img%>>
+      <p><%=product.description%></p>
+      <h3>Price: $<%=product.price%></h3>
+      <!-- BUY -->
+      <% if (product.qty <= 0) {%>
+        <h4> OUT OF STOCK</h4>
+      <% } else {%>
+      <h3>In Stock: <%=product.qty%></h3>
+      <form action="/products/<%=product.id; %>?_method=PATCH" method="POST">
+          <input type="submit" value="BUY NOW"/>
+      </form>
+      <% } %>
+      <!-- END BUY NIGHTMARE -->
+      <a href="/products/<%=product.id; %>/edit" class="editlink">Edit</a>
+    </main>
+    <form action="/products/<%=product.id; %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE"/>
+    </form>
+    <br />
+    <nav>
+    <a href="/products">Back to Store</a>
+    </nav>
+
+  </body>
+</html>
