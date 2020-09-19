@@ -11,6 +11,11 @@ h1, h2 {
   font-family: 'Courgette', cursive;
 }
 
+.navbar img {
+  width: 100px;
+  height: 100px;
+}
+
 
 /* INDEX PAGE */
 
