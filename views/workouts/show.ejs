@@ -9,10 +9,7 @@
       <%- include('../partials/nav.ejs') %>
     </nav><br />
 
-    <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary calories-button" style="background-color: black" data-toggle="modal" data-target="#staticBackdrop">
-    🥊CLICK ME🥊
-  </button>
+
 
     <main class="show-workout">
     <h1><%=workout.activity%></h1>
@@ -52,7 +49,11 @@
     calculateCaloriesBurned()
     %>
 
-  </h6><br/>
+  </h6>
+    <!-- BUTTON TRIGGER MODAL -->
+    <button type="button" class="btn btn-primary calories-button" style="background-color: black" data-toggle="modal" data-target="#staticBackdrop">
+      🥊CLICK ME🥊
+    </button><br/><br/>
     <button type="button" name="button"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button><br />*Please note that you must sign up (new users) and/or log in to edit an entry*<br />
     <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
