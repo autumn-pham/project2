@@ -52,17 +52,13 @@
     calculateCaloriesBurned()
     %>
 
-
   </h6>
     <br /><br />
-    <button type="button" name="button"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button><br /><br />
+    <button type="button" name="button"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button><br />*Please note that you must sign up (new users) and/or log in to edit an entry*<br />
     <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
     </form>
   </main>
-
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -75,7 +71,7 @@
         </button>
       </div>
       <div class="modal-body">
-        The calories burned calculation relies on a key value known as MET, or metabolic equivalent. Activties are assigned different values based on their intensity. The MET value of an activity times your weight will give you the amount of calories burned per hour. Please note this calculation does not account for an individual's basal metabolic rate (BMR).
+        The calories burned calculation relies on a key value known as MET, or metabolic equivalent. Activties are assigned different values based on their intensity. The MET value of an activity times your weight will give you the amount of calories burned. Please note this calculation does not account for an individual's basal metabolic rate (BMR).
       </div>
     </div>
   </div>
