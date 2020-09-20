@@ -15,7 +15,9 @@
                 <div class="card">
                   <div class="card-body">
                     <h2><%=products[i].name; %></h2>
-                    <img src=<%=products[i].img;%> class="card-img"><br/>
+                    <!-- <a href="/products/<%=products[i].id; %>">
+                    <%=products[i].name; %></a> -->
+                    <img src=<%=products[i].img;%> class="card-img products-img"><br/>
                     <%=products[i].description; %><br/>
                     PRICE: $<%=products[i].price; %><br/>
                     <% if (products[i].qty <= 0) {%>

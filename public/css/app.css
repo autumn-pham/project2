@@ -68,25 +68,24 @@ footer {
   width: 100%;
   margin-top: 3em;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   /* position: absolute;
   bottom: 0; */
 }
 
 footer img {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
 }
 
-.footer-info, .icons {
-  width: 35%;
+.footer-info, .icons, .kellen {
+  width: 30%;
 }
 
 
 .fa {
   justify-content: center;
   color: white;
-  width: 100px;
   text-decoration: none;
 }
 
@@ -139,6 +138,7 @@ button > a {
 
 /* SHOP */
 
-/* .shop {
-  border: 1px solid black;
-} */
+.products-img img {
+  width: 300px;
+  height: 300px;
+}

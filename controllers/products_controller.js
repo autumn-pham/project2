@@ -97,7 +97,7 @@ products.get('/setup/seed', (req, res) => {
       {
         name: 'Everlast Heavy Bag Stand',
         description: 'Dual heavybag and speed bag stand for your quarantine needs.',
-        img: 'https://i.ibb.co/BzkTwWT/everlast-stand.jpg',
+        img: 'https://i.ibb.co/54XRNGB/everlaststand.jpg',
         price: 200,
         qty: 2
       },
@@ -108,12 +108,12 @@ products.get('/setup/seed', (req, res) => {
         price: 57,
         qty: 5
       },
-        {
-          name: 'Fairtex Muay Thai Shorts',
-          description: 'Kick butt in these leopard shorts from the best brand in Muay Thai gear and apparel.',
-          img: 'https://i.ibb.co/cxZ0Yg0/boxing-shorts.jpg',
-          price: 35,
-          qty: 3
+      {
+        name: 'Fairtex Muay Thai Shorts',
+        description: 'Kick butt in these leopard shorts from the best brand in Muay Thai gear and apparel.',
+        img: 'https://i.ibb.co/cxZ0Yg0/boxing-shorts.jpg',
+        price: 35,
+        qty: 3
         }
     ],
     (error, data) => {
