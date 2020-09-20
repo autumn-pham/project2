@@ -32,13 +32,13 @@
     const calculateCaloriesBurned = () =>{
       let caloriesBurned = 0
       if (workout.type === 'cardio'){
-        caloriesBurned += ((workout.time * (7 * 3.5 * convertLbs())) / 200)%>
+        caloriesBurned += Math.floor(((workout.time * (7 * 3.5 * convertLbs())) / 200))%>
         <%=caloriesBurned%>
       <% } else if (workout.type === 'strength training'){
-        caloriesBurned += ((workout.time * (6 * 3.5 * convertLbs())) / 200)%>
+        caloriesBurned += Math.floor(((workout.time * (6 * 3.5 * convertLbs())) / 200))%>
         <%=caloriesBurned%>
       <% } else if (workout.type === 'flexibility training'){
-        caloriesBurned += ((workout.time * (3 * 3.5 *convertLbs())) / 200)%>
+        caloriesBurned += Math.floor(((workout.time * (3 * 3.5 *convertLbs())) / 200))%>
         <%=caloriesBurned%>
       <% } else {
         console.log('Sorry, calories burned cannot be calculated')
