@@ -11,16 +11,47 @@
 
     <main class="show-workout">
     <h1><%=workout.activity%></h1>
-    <h5>date:</h5>
+    <h5>DATE:</h5>
     <h6><%=workout.date%></h6>
-    <h5>activity:</h5>
+    <h5>ACTIVITY:</h5>
     <h6><%=workout.activity%></h6>
-    <h5>type:</h5>
+    <h5>TYPE:</h5>
     <h6><%=workout.type%></h6>
-    <h5>your weight:</h5>
-    <h6><%=workout.weight%></h6>
-    <h5>time exercised (in minutes):</h5>
-    <h6><%=workout.time%></h6>
+    <h5>YOUR WEIGHT:</h5>
+    <h6><%=workout.weight%> lbs</h6>
+    <h5>TIME EXERCISED:</h5>
+    <h6><%=workout.time%> mins</h6>
+    <h5>CALORIES BURNED:</h5>
+  <h6>
+    <%
+    const convertLbs = () => {
+      let kg = workout.weight / 2.20462
+      return kg
+    }
+
+    const calculateCaloriesBurned = () =>{
+      let caloriesBurned = 0
+      if (workout.type === 'cardio'){
+        caloriesBurned += ((workout.time * (7 * 3.5 * convertLbs())) / 200)%>
+        <%=caloriesBurned%>
+      <% } else if (workout.type === 'strength training'){
+        caloriesBurned += ((workout.time * (6 * 3.5 * convertLbs())) / 200)%>
+        <%=caloriesBurned%>
+      <% } else if (workout.type === 'flexibility training'){
+        caloriesBurned += ((workout.time * (3 * 3.5 *convertLbs())) / 200)%>
+        <%=caloriesBurned%>
+      <% } else {
+        console.log('Sorry, calories burned cannot be calculated')
+     }
+    }
+    calculateCaloriesBurned()
+
+
+
+    %>
+
+
+  </h6>
     <br /><br />
     <button type="button" name="button"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button><br /><br />
     <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
