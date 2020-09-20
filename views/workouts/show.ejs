@@ -9,6 +9,11 @@
       <%- include('../partials/nav.ejs') %>
     </nav><br />
 
+    <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary calories-button" style="background-color: black" data-toggle="modal" data-target="#staticBackdrop">
+    🥊CLICK ME🥊
+  </button>
+
     <main class="show-workout">
     <h1><%=workout.activity%></h1>
     <h5>DATE:</h5>
@@ -45,9 +50,6 @@
      }
     }
     calculateCaloriesBurned()
-
-
-
     %>
 
 
@@ -58,6 +60,27 @@
         <input type="submit" value="DELETE"/>
     </form>
   </main>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Calories Burned</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        The calories burned calculation relies on a key value known as MET, or metabolic equivalent. Activties are assigned different values based on their intensity. The MET value of an activity times your weight will give you the amount of calories burned per hour. Please note this calculation does not account for an individual's basal metabolic rate (BMR).
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- FOOTER -->
   <footer class="page-footer">
