@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/head.ejs') %>
+  </head>
+  <body>
+    <nav>
+      <%- include('../partials/nav.ejs') %>
+    </nav><br />
+    <div class="container">
+
+    <!-- MAIN -->
+    <form>
+	    <input type="text" name="get-food" id="text-submit" placeholder="search recipes"/>
+	    <input type="submit" id="submit" value="GET RECIPES"/>
+      <button type="button" class="reset-btn">RESET LIST</button>
+    </form>
+
+
+
+
+      <ul id="food-here">
+
+      </ul>
+
+
+    </div>
+  </body>
+</html>
