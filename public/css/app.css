@@ -156,3 +156,22 @@ button > a {
 .product-card {
   text-align: center;
 }
+
+/* FOOD */
+
+.food-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+main .card {
+  width: 30%;
+  margin: 1em 0;
+}
+
+main p {
+  margin: 0;
+  padding: 0;
+}

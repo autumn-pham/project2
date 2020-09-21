@@ -11,17 +11,19 @@ $(()=>{
     }).then(
       (data)=>{
         console.log(data)
-        for(let i=0; i < 5; i++){
-          let newDiv = $('<div>').addClass('food-list').attr('id', i)
-          let newLabel = $('<li>').text('Food: ' + data.hits[i].recipe.label).css('text-align', 'center')
-          let newImage = $('<img>').attr('src', data.hits[i].recipe.image)
-          let newLink =  $('<li>').text('Link to recipe: ' + data.hits[i].recipe.shareAs)
-          let newCalories = $('<li>').text('Link to recipe: ' + data.hits[i].recipe.calories)
-          $('ul').append(newDiv)
-          newDiv.append(newLabel)
+        for(let i=0; i < 6; i++){
+          let newDiv = $('<div>').addClass('card food-card').attr('id', i)
+          let newImage = $('<img>').attr('src', data.hits[i].recipe.image).addClass('card-body card-img-top')
+          let newLabel = $('<h5>').text( data.hits[i].recipe.label).css('text-align', 'center').addClass('card-body card-text')
+          let newYield = $('<p>').text('SERVES: ' + data.hits[i].recipe.yield).addClass('card-body card-text')
+          let newCalories = $('<p>').text('CALORIES: ' + data.hits[i].recipe.calories).addClass('card-body card-text')
+          let newLink =  $('<a>').text( data.hits[i].recipe.shareAs).addClass('card-body card-text')
+          $('main').append(newDiv)
           newDiv.append(newImage)
-          newDiv.append(newLink)
+          newDiv.append(newLabel)
+          newDiv.append(newYield)
           newDiv.append(newCalories)
+          newDiv.append(newLink)
         }
       (error)=>{
         console.log('bad');
