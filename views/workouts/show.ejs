@@ -54,13 +54,18 @@
     <button type="button" class="btn btn-primary calories-button" style="background-color: black" data-toggle="modal" data-target="#staticBackdrop">
       🥊CLICK ME🥊
     </button><br/><br/>
-    <button type="button" name="button"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button><br />*Please note that you must sign up (new users) and/or log in to edit an entry*<br />
-    <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE"/>
-    </form>
+
+    <!-- EDIT & DELETE -->
+    <div class="action-btns">
+      <button type="button" name="button" class="edit-btn"><a href="/workouts/<%=workout._id%>/edit">EDIT</a></button>
+      <form action="/workouts/<%=workout._id%>?_method=DELETE" method="POST" class="delete-btn">
+          <input type="submit" value="DELETE"/>
+      </form>
+    </div>
+    *Please note that you must sign up (new users) and/or log in to edit an entry*
   </main>
 
-<!-- Modal -->
+<!-- MODAL -->
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
