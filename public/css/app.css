@@ -83,12 +83,18 @@ footer img {
 }
 
 .footer-info, .icons, .kellen {
-  width: 30%;
+  width: 31%;
 }
 
+.footer-info, .kellen {
+  text-align: center;
+}
+
+.kellen a {
+  color: white;
+}
 
 .fa {
-  justify-content: center;
   color: white;
   text-decoration: none;
 }
