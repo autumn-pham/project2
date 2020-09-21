@@ -66,9 +66,9 @@ workouts.post('/', (req, res)=>{
   if (req.body.type === 'cardio') {
     req.body.type = 'cardio'
   } else if (req.body.type === 'strength training') {
-    req.body.type = 'strength training'
+    req.body.type = 'flexibility training'
   } else {
-    req.body.type = 'static stretching'
+    req.body.type = 'flexibility training'
   }
   Workout.create(req.body, (error, createdWorkout)=>{
     res.redirect('/workouts');

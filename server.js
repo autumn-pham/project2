@@ -65,30 +65,14 @@ app.get('/beginners', (req, res) => {
   res.render('beginners/show.ejs')
 })
 
+// TESTING
+
+app.get('/food', (req, res) => {
+  res.render('food/show.ejs')
+})
+
 //Listener
 
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
 
 // TEST
-
-// const convertLbs = () => {
-//   let kg = workout.weight / 2.20462
-//   return kg
-// }
-//
-// const calculateCaloriesBurned = () =>{
-//   let caloriesBurned = 0
-//   if (workout.type === 'cardio'){
-//     caloriesBurned += ((workout.time * (7 * 3.5 * convertLbs())) / 200)
-//    return caloriesBurned
-//   } else if (workout.type === 'strength training'){
-//     caloriesBurned += ((workout.time * (6 * 3.5 * convertLbs())) / 200)
-//     return caloriesBurned
-//   } else if (workout.type === 'flexibility training'){
-//     caloriesBurned += ((workout.time * (3 * 3.5 *convertLbs())) / 200)
-//     return caloriesBurned
-//   } else {
-//     console.log('Sorry, calories burned cannot be calculated')
-//  }
-// }
-// calculateCaloriesBurned()
