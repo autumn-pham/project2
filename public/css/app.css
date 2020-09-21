@@ -159,6 +159,10 @@ button > a {
 
 /* FOOD */
 
+.food-search {
+  text-align: center;
+}
+
 .food-main {
   display: flex;
   flex-direction: row;
@@ -167,11 +171,17 @@ button > a {
 }
 
 main .card {
-  width: 30%;
+  width: 45%;
   margin: 1em 0;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 main p {
   margin: 0;
+  padding: 0;
+}
+
+main .card-body {
   padding: 0;
 }
