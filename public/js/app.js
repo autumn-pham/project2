@@ -16,8 +16,10 @@ $(()=>{
           let newImage = $('<img>').attr('src', data.hits[i].recipe.image).addClass('card-body card-img-top')
           let newLabel = $('<h5>').text( data.hits[i].recipe.label).css('text-align', 'center').addClass('card-body card-text')
           let newYield = $('<p>').text('SERVES: ' + data.hits[i].recipe.yield).addClass('card-body card-text')
-          let newCalories = $('<p>').text('CALORIES: ' + data.hits[i].recipe.calories).addClass('card-body card-text')
+          let newCalories = $('<p>').text('CALORIES: ' + Math.floor(data.hits[i].recipe.calories)).addClass('card-body card-text')
           let newDietLabels = $('<p>').text(data.hits[i].recipe.dietLabels).addClass('card-body card-text')
+          let newHealthLabels = $('<p>').text(data.hits[i].recipe.healthLabels).addClass('card-body card-text')
+          let newIngredients = $('<p>').text('INGREDIENTS: ' + data.hits[i].recipe.ingredientLines).addClass('card-body card-text')
           let newLink =  $('<a>').text( data.hits[i].recipe.shareAs).addClass('card-body card-text')
           $('main').append(newDiv)
           newDiv.append(newImage)
@@ -25,6 +27,8 @@ $(()=>{
           newDiv.append(newYield)
           newDiv.append(newCalories)
           newDiv.append(newDietLabels)
+          newDiv.append(newHealthLabels)
+          newDiv.append(newIngredients)
           newDiv.append(newLink)
         }
       (error)=>{
