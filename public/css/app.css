@@ -191,7 +191,7 @@ button > a {
 
 .food-btn, .reset-btn {
   border: 1px solid black;
-  padding: 1em;
+  margin-right: 2em;
 }
 
 .reset-btn {
