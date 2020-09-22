@@ -175,10 +175,15 @@ button > a {
   width: 100%;
   height: 350px;
   color: white;
+  text-align: center;
 }
 
 .banner h4 {
   padding: 1em;
+}
+
+.text-submit-food {
+  text-align: center;
 }
 
 .food-btn, .reset-btn {
