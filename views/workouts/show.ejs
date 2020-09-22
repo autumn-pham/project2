@@ -42,9 +42,9 @@
       <% } else if (workout.type === 'flexibility training'){
         caloriesBurned += Math.floor(((workout.time * (3 * 3.5 * convertLbs())) / 200))%>
         <%=caloriesBurned%>
-      <% } else {
-        console.log('Sorry, calories burned cannot be calculated')
-     }
+      <% } else { %>
+        Sorry, invalid input. Calories burned cannot be calculated.
+    <% }
     }
     calculateCaloriesBurned()
     %>
