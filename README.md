@@ -7,7 +7,7 @@ TECHNOLOGIES USED:
 Node.js, MongoDB Atlas, Mongoose, Express, EJS, Heroku
 
 APPROACH TAKEN:
-Tackled MVPs first with just a workout log, got all the routes up and running and deployed. Added extra pages and CSS styling after.
+Tackled MVPs first with just a workout log, got all the routes up and running and deployed. Added extra pages and CSS styling after. Incorporated 3rd party API last.
 
 NOTES TO MYSELF:
-Would love to use third-party API to allow users to search a database of healthy meal options.
+Responsive design viewport (did not know that was a thing). It would be cool to have users be able to save their favorite recipes and have only their workout logs appear in the future instead of everything that goes into the database. Real shop would also be nice.

@@ -1,20 +1,18 @@
+/* GENERAL */
 body {
   font-family: 'Montserrat', sans-serif;
 }
-
 h1, h2 {
   font-family: 'Courgette', cursive;
+}
+h4 {
+  text-align: center;
 }
 
 .fighter-physique h4 {
   text-align: center;
   border: 1px solid black;
 }
-
-h4 {
-  text-align: center;
-}
-
 
 .navbar {
   font-family: 'Courgette', cursive;
@@ -73,8 +71,6 @@ table {
 
 /* BEGINNERS PAGE */
 
-
-
 /* FOOTER */
 
 footer {
@@ -95,11 +91,9 @@ footer img {
 
 .footer-info, .icons, .kellen {
   width: 31%;
-}
-
-.footer-info, .kellen {
   text-align: center;
 }
+
 
 .kellen a {
   color: white;
@@ -108,11 +102,10 @@ footer img {
 .fa {
   color: white;
   text-decoration: none;
+  padding: .5em;
 }
 
-
 /* FORMS */
-
 
 .sidebar {
   background: url('https://i.ibb.co/VH2HvRC/paigevzkaratiehottie.jpg');
@@ -183,7 +176,6 @@ button > a {
   height: 350px;
   color: white;
 }
-
 
 .banner h4 {
   padding: 1em;
