@@ -10,18 +10,19 @@
       <%- include('../partials/nav.ejs') %>
     </nav><br />
     <div class="container">
-      <h4>Maintaining a healthy lifestyle/obtaining a fighter's physique isn't only about exercise. Diet and nutrition also play an essential role. If you're out of ideas for meals, use search for some recipes below.</h4>
+      <div class="banner">
+        <h4>Maintaining a healthy lifestyle/obtaining a fighter's physique isn't only about exercise. Diet and nutrition also play an essential role. If you're out of ideas for meals, use search for some recipes below.</h4>
 
-    <!-- MAIN -->
-    <form class="food-search">
-	    <input type="text" name="get-food" id="text-submit" placeholder="search recipes"/>
-	    <input type="submit" id="submit" value="GET RECIPES"/>
-      <button type="button" class="reset-btn">RESET LIST</button>
-    </form>
-
-
+        <!-- FOOD SEARCH -->
+        <form class="food-search">
+    	    <input type="text" name="get-food" id="text-submit" placeholder="search recipes" class="food-btn"/>
+    	    <input type="submit" id="submit" value="GET RECIPES"/>
+          <button type="button" class="reset-btn">RESET LIST</button>
+        </form>
+      </div>
+      <!-- MAIN -->
       <main class="food-main">
-        
+
       </main>
 
 
