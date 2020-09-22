@@ -233,8 +233,13 @@ main .card-body {
     color: white;
   } */
 
-  .add-btn, .buy-btn {
+  .add-btn, {
     background-color: white;
     color: black;
   }
-}
+
+  .buy-btn, .food-btn {
+    background-color: black;
+    color: white;
+  }
+/* } */
