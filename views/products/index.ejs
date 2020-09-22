@@ -25,7 +25,7 @@
                          OUT OF STOCK
                       <% } else {%>
                       IN STOCK: <%=products[i].qty%>
-                      <form action="/products/<%=products[i].id; %>?_method=PATCH" method="POST">
+                      <form action="/products/<%=products[i].id; %>?_method=PATCH" method="POST" class="buy-btn">
                           <input type="submit" value="BUY"/>
                       </form>
                       <% } %>
