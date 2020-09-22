@@ -171,11 +171,12 @@ button > a {
 .banner {
   background: url('https://i.ibb.co/NpQh9Hh/Healthy-lifestyle-concept-with-diet-and-fitness-on-wooden-boards.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 350px;
+  background-size: fill;
+  /* width: 100%;
+  height: 350px; */
   color: white;
   text-align: center;
+  border-radius: 7px;
 }
 
 .banner h4 {
