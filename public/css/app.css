@@ -71,6 +71,12 @@ table {
 
 /* BEGINNERS PAGE */
 
+.disclaimer {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  margin: 1em 1.5em 0 1.5em;
+}
+
 /* FOOTER */
 
 footer {
@@ -231,9 +237,9 @@ main .card-body {
     color: white;
   } */
 
-  .add-btn, {
-    background-color: white;
-    color: black;
+  .add-btn {
+    background-color: #800000;
+    color: white;
   }
 
   .buy-btn, .food-btn {

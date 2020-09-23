@@ -66,7 +66,7 @@ workouts.post('/', (req, res)=>{
   if (req.body.type === 'cardio') {
     req.body.type = 'cardio'
   } else if (req.body.type === 'strength training') {
-    req.body.type = 'flexibility training'
+    req.body.type = 'strength training'
   } else {
     req.body.type = 'flexibility training'
   }
