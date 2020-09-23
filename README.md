@@ -10,4 +10,5 @@ APPROACH TAKEN:
 Tackled MVPs first with just a workout log, got all the routes up and running and deployed. Added extra pages and CSS styling after. Incorporated 3rd party API last.
 
 NOTES TO MYSELF:
-Responsive design viewport (did not know that was a thing). It would be cool to have users be able to save their favorite recipes and have only their workout logs appear in the future instead of everything that goes into the database. Better graphics, videos demonstrating workouts. Real shop would also be nice. 
+Responsive design viewport (did not know that was a thing). It would be cool to have users be able to save their favorite recipes and have only their workout logs appear in the future instead of everything that goes into the database. Better graphics, videos demonstrating workouts. Real shop would also be nice.
+Input type options with bootstrap figure out how to get that into req.body.type in workouts controller. Did not work.
