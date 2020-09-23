@@ -52,10 +52,6 @@ table {
   text-align: center;
 }
 
-.d-flex {
-  background-color: black;
-  color: white;
-}
 
 .action-btns {
   display: flex;
@@ -113,17 +109,30 @@ footer img {
 
 /* FORMS */
 
+.log-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
 .sidebar {
   background: url('https://i.ibb.co/VH2HvRC/paigevzkaratiehottie.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
   color: white;
+  width: 45%;
 }
 
+
 .newlog {
+  width: 45%;
+  background-color: black;
+  color: white;
   border: 1px solid black;
   border-radius: 10px;
+  text-align: center;
 }
 
 legend {
@@ -136,7 +145,7 @@ label {
 }
 
 input {
-  width: 50%;
+  width: 90%;
   margin: 10px 0;
   padding: 10px;
   box-sizing: border-box;
@@ -144,7 +153,7 @@ input {
 }
 
 input[type="submit"] {
-  width: 50%;
+  width: 90%;
   height: 50px;
   border: 0px;
 }
@@ -240,10 +249,23 @@ main .card-body {
   .add-btn {
     background-color: #800000;
     color: white;
+    text-align: center;
   }
 
   .buy-btn, .food-btn {
     background-color: black;
     color: white;
   }
+
+  .text-submit-food {
+    width: 50%;
+  }
+
+.food-search {
+  display: flex;
+  flex-direction: row;
+}
+.food-btn, .reset-btn {
+  width: 45%;
+}
 /* } */
