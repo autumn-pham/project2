@@ -19,7 +19,16 @@ $(()=>{
           let newCalories = $('<p>').text('CALORIES: ' + Math.floor(data.hits[i].recipe.calories)).addClass('card-body card-text')
           let newDietLabels = $('<p>').text(data.hits[i].recipe.dietLabels).addClass('card-body card-text')
           let newHealthLabels = $('<p>').text(data.hits[i].recipe.healthLabels).addClass('card-body card-text')
-          let newIngredients = $('<p>').text('INGREDIENTS: ' + data.hits[i].recipe.ingredientLines).addClass('card-body card-text')
+
+        /* Daniel Start Edit  */
+          let newIngredients = $('<p>').text(`INGREDIENTS:`)
+          for (let j = 0; j < data.hits[i].recipe.ingredientLines.length; j++) {
+            const line = $(`<p>${data.hits[i].recipe.ingredientLines[j]}</p>`)
+            newIngredients.append(line)
+          }
+
+        /*  End Edit  */
+
           let newLink =  $('<a>').text( data.hits[i].recipe.shareAs).addClass('card-body card-text')
           $('main').append(newDiv)
           newDiv.append(newImage)
