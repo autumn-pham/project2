@@ -109,11 +109,9 @@ footer img {
 
 /* FORMS */
 
-.log-container {
+.d-flex {
   background-color: black;
   color: white;
-  display: flex;
-  flex-direction: row;
 }
 
 .sidebar {
@@ -145,7 +143,7 @@ label {
 }
 
 input {
-  width: 90%;
+  width: 50%;
   margin: 10px 0;
   padding: 10px;
   box-sizing: border-box;
@@ -153,7 +151,7 @@ input {
 }
 
 input[type="submit"] {
-  width: 90%;
+  width: 50%;
   height: 50px;
   border: 0px;
 }
@@ -256,7 +254,7 @@ main .card-body {
     background-color: black;
     color: white;
   }
-
+/* 
   .text-submit-food {
     width: 50%;
   }
@@ -267,5 +265,5 @@ main .card-body {
 }
 .food-btn, .reset-btn {
   width: 45%;
-}
+} */
 /* } */

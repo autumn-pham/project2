@@ -12,7 +12,7 @@
     <!-- INPUT FORM -->
     <div class="container">
       <h1>Log New Workout</h1>
-      <div class="log-container">
+      <div class="d-flex flex-row justify-content-around">
       <div class="sidebar"><h3>WORK YOUR WAY TO A FIGHTER'S PHYSIQUE</h3></div>
       <div class="newlog">
         <form action="/workouts" method="POST">
@@ -22,12 +22,12 @@
             <label for="activity">ACTIVITY:</label>
             <input type="text" name="activity" required />
             <label for="type">TYPE:</label>
-            <!-- <select class="form-control-sm">
-              <option>cardio</option>
-              <option>strength training</option>
-              <option>flexibility training</option>
-            </select> -->
-            <input type="text" name="type" placeholder="cardio | strength training | flexibility training" required />
+            <select class="form-control-lg" id="activity-select" name="type">
+              <option value="cardio">cardio</option>
+              <option value="strength training">strength training</option>
+              <option value="flexibility training">flexibility training</option>
+            </select>
+            <!-- <input type="text" name="type" placeholder="cardio | strength training | flexibility training" required /> -->
             <label for="weight">CURRENT WEIGHT:</label>
             <input type="text" name="weight" placeholder="in lbs" required />
             <label for="time">TIME SPENT EXERCISING:</label>
