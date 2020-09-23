@@ -17,7 +17,7 @@ sessions.post('/', (req, res) => {
       console.log(err)
       res.send('The database is down')
     } else if (!foundUser) {
-      res.send('<a href="/">Sorry, no user found. Please sign up. </a>')
+      res.send('<a href="/users/new">Sorry, no user found. Please sign up. </a>')
     } else {
       if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentUser = foundUser
