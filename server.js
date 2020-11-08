@@ -1,3 +1,4 @@
+
 //Dependencies
 
 const express = require('express')
@@ -58,17 +59,21 @@ app.use('/sessions', sessionsController)
 
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.redirect('/workouts');
+  res.redirect('/home');
+});
+
+app.get('/home' , (req, res) => {
+  res.render('home/index.html.ejs');
 });
 
 app.get('/beginners', (req, res) => {
-  res.render('beginners/show.ejs')
+  res.render('beginners/show.html.ejs');
 })
 
 // TESTING
 
 app.get('/food', (req, res) => {
-  res.render('food/show.ejs')
+  res.render('food/show.html.ejs');
 })
 
 //Listener

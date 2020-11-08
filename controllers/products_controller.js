@@ -12,7 +12,7 @@ const isAuthenticated = (req, res, next) => {
 // NEW
 
 products.get('/new', (req, res)=>{
-    res.render('products/new.ejs'),
+    res.render('products/new.html.ejs'),
     {currentUser: req.session.currentUser}
 });
 
@@ -21,7 +21,7 @@ products.get('/new', (req, res)=>{
 products.get('/:id/edit', (req, res)=>{
   Product.findById(req.params.id, (err, foundProduct)=>{
     res.render(
-    	'products/edit.ejs',
+    	'products/edit.html.ejs',
     		{
     			product: foundProduct,
           currentUser: req.session.currentUser
@@ -42,7 +42,7 @@ products.delete('/:id', (req, res) =>{
 
 products.get('/:id', (req, res)=>{
   Product.findById(req.params.id, (error, foundProduct)=>{
-    res.render('products/show.ejs', {
+    res.render('products/show.html.ejs', {
       product: foundProduct,
       currentUser: req.session.currentUser
     });
@@ -66,7 +66,7 @@ products.post('/', (req, res)=>{
 // INDEX
 products.get('/', (req, res) =>{
   Product.find({}, (error, allProducts)=>{
-      res.render('products/index.ejs', {
+      res.render('products/index.html.ejs', {
         products: allProducts,
         currentUser: req.session.currentUser
       });

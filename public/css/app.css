@@ -23,6 +23,50 @@ h4 {
   height: 100px;
 }
 
+/* HOME PAGE */
+.home-banner {
+  background-image: url("https://i.ibb.co/hXhyT4K/autumnkicks.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  text-align: center;
+  opacity: .7;
+}
+
+.home-banner h1 {
+  padding: .5em 1em 5em 1em;
+}
+
+.home-banner h3 {
+  padding: 2em;
+}
+
+.static-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+
+.about, .works {
+  width: 48%;
+}
+
+.secondbanner {
+  background-image: url("https://i.ibb.co/hdB4dfp/Fitness-training-with-kettlebell-in-sport-gym-with-sunlight-effect.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  text-align: center;
+  color: white;
+  opacity: .5;
+  margin-bottom: 1em;
+}
+
+
 
 /* INDEX PAGE */
 
@@ -78,12 +122,14 @@ table {
 footer {
   background-color: black;
   color: white;
-  width: 100%;
-  margin-top: 3em;
   display: flex;
-  justify-content: space-between;
-  /* position: absolute;
-  bottom: 0; */
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.footer1, .footer2, .footer3 {
+  width: 31%;
 }
 
 footer img {
@@ -91,21 +137,15 @@ footer img {
   height: 75px;
 }
 
-.footer-info, .icons, .kellen {
-  width: 31%;
-  text-align: center;
-}
-
-
-.kellen a {
+footer a {
   color: white;
 }
 
 .fa {
+  padding: .25em;
   color: white;
-  text-decoration: none;
-  padding: .5em;
 }
+
 
 /* FORMS */
 
@@ -254,7 +294,7 @@ main .card-body {
     background-color: black;
     color: white;
   }
-/* 
+/*
   .text-submit-food {
     width: 50%;
   }

@@ -12,7 +12,7 @@ const isAuthenticated = (req, res, next) => {
 // NEW
 
 workouts.get('/new', (req, res)=>{
-    res.render('workouts/new.ejs'),
+    res.render('workouts/new.html.ejs'),
     {currentUser: req.session.currentUser}
 });
 
@@ -22,7 +22,7 @@ workouts.get('/:id/edit', (req, res)=>{
   if (req.session.currentUser) {
     Workout.findById(req.params.id, (err, foundWorkout)=>{
       res.render(
-      	'workouts/edit.ejs',
+      	'workouts/edit.html.ejs',
       		{
       			workout: foundWorkout,
             currentUser: req.session.currentUser
@@ -44,7 +44,7 @@ workouts.delete('/:id', (req, res) => {
 
 workouts.get('/:id', (req, res)=>{
   Workout.findById(req.params.id, (error, foundWorkout)=>{
-    res.render('workouts/show.ejs', {
+    res.render('workouts/show.html.ejs', {
       workout: foundWorkout,
       currentUser: req.session.currentUser
     });
@@ -79,7 +79,7 @@ workouts.post('/', (req, res)=>{
 
 workouts.get('/', (req, res) =>{
   Workout.find({}, (error, allWorkouts)=>{
-      res.render('workouts/index.ejs', {
+      res.render('workouts/index.html.ejs', {
         workouts: allWorkouts,
         currentUser: req.session.currentUser
       });

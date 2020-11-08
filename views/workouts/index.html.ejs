@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-     <%- include('../partials/head.ejs') %>
+     <%- include('../partials/head.html.ejs') %>
   </head>
   <body>
     <!-- NAV -->
     <nav>
-      <%- include('../partials/nav.ejs') %>
+      <%- include('../partials/nav.html.ejs') %>
     </nav><br />
   <div class="container">
     <!-- MAIN STATIC STUFF  -->
@@ -51,8 +51,8 @@
 
     <!-- ENTRIES -->
       <h4>WORKOUT TRACKER</h4>
-      <table class="table table-bordered">
-        <thead>
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
           <tr>
           <th scope="col">Date</th>
           <th scope="col">Activity</th>
@@ -73,7 +73,7 @@
 
     <!-- FOOTER -->
     <footer class="page-footer">
-    <%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footer.html.ejs') %>
     </footer>
   </body>
 </html>
