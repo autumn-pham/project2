@@ -372,4 +372,18 @@ main .card-body {
     height: 3em;
     padding: 0;
   }
+
+  .food-btn, .reset-btn {
+    border: 1px solid black;
+    margin: .5em auto;
+  }
+
+  .food-main {
+    display: block;
+  }
+  main .card {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
 }
