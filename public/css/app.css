@@ -136,6 +136,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
+  margin-top: 2em;
 }
 
 .footer1, .footer2, .footer3 {
@@ -213,6 +214,10 @@ button > a {
   color: black;
 }
 
+.new-log-container {
+  margin-bottom: 2em;
+}
+
 /* SHOP */
 
 /* .products-container {
@@ -230,6 +235,7 @@ button > a {
   width: 300px;
   height: 300px;
 } */
+
 
 .product-card {
   text-align: center;
